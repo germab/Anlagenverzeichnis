@@ -33,7 +33,8 @@ public class TableCellRenderer implements javax.swing.table.TableCellRenderer
         else if(value instanceof Integer || value instanceof Double && column!=2 && column!=3)
         {
             DecimalFormat tausendertrennung = new DecimalFormat();
-            label.setText(tausendertrennung.format(value));
+            label.setText(String.format(".%2f",tausendertrennung.format(value)));
+            
         }
         else if(value instanceof Double)
         {
