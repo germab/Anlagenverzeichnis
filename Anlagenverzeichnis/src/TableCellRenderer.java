@@ -40,6 +40,8 @@ public class TableCellRenderer implements javax.swing.table.TableCellRenderer
             label.setText(String.format("%.1f", value));
         }
         
+        
+        
         if(isSelected)
         {
             label.setBackground(new Color(130,200,240,123));

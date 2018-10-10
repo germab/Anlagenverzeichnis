@@ -73,6 +73,13 @@ public class GUI extends javax.swing.JFrame {
         });
 
         btUpdate.setText("Update Table");
+        btUpdate.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                onUpdate(evt);
+            }
+        });
 
         jtTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
@@ -126,6 +133,11 @@ public class GUI extends javax.swing.JFrame {
     {//GEN-HEADEREND:event_onAction
         year = (int) this.cbBox.getSelectedItem();
     }//GEN-LAST:event_onAction
+
+    private void onUpdate(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onUpdate
+    {//GEN-HEADEREND:event_onUpdate
+        model.calculate();
+    }//GEN-LAST:event_onUpdate
 
     /**
      * @param args the command line arguments
