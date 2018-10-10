@@ -10,11 +10,13 @@
  */
 public class GUI extends javax.swing.JFrame {
 
+    private AnlagenBL model = new AnlagenBL();
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
+        this.jtTable.setModel(model);
         int year= 2009;
         for(int i =0; i<11;i++)
         {
