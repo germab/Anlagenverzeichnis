@@ -30,13 +30,15 @@ public class GUI extends javax.swing.JFrame {
             this.cbBox.addItem(year);
         }
         File f = new File("./anlagenverzeichnis.csv");
+        year = (int) this.cbBox.getSelectedItem();
         model.load(f);
     }
     
     
     public static int getYear()
     {
-       
+        return year;
+
     }
 
     /**
@@ -46,7 +48,8 @@ public class GUI extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         lbYear = new javax.swing.JLabel();
         cbBox = new javax.swing.JComboBox<>();
@@ -59,16 +62,26 @@ public class GUI extends javax.swing.JFrame {
 
         lbYear.setText("Year:");
 
+        cbBox.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                onAction(evt);
+            }
+        });
+
         btUpdate.setText("Update Table");
 
         jtTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -106,6 +119,11 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void onAction(java.awt.event.ActionEvent evt)//GEN-FIRST:event_onAction
+    {//GEN-HEADEREND:event_onAction
+        year = (int) this.cbBox.getSelectedItem();
+    }//GEN-LAST:event_onAction
 
     /**
      * @param args the command line arguments
