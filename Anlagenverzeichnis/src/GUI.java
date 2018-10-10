@@ -24,13 +24,11 @@ public class GUI extends javax.swing.JFrame {
         this.jtTable.setModel(model);
         this.jtTable.setDefaultRenderer(Object.class, renderer);
         int year= 2009;
-        /*for(int i =0; i<11;i++)
+        for(int i =0; i<11;i++)
         {
             year+=1;
             this.cbBox.addItem(year);
         }
-        */
-        this.cbBox.addItem(2016);
         File f = new File("./anlagenverzeichnis.csv");
         year = (int) this.cbBox.getSelectedItem();
         model.load(f);
