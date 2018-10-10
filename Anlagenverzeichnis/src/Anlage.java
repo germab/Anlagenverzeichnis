@@ -33,7 +33,6 @@ public class Anlage {
         this.bw = bw;
         this.afaDJ = afaDJ;
         this.bwEnde = bwEnde;
-        this.bis_nd = LocalDate.now().getYear()-nd;
     }
     
     public Anlage(String line){
@@ -42,11 +41,6 @@ public class Anlage {
         this.ak = Integer.parseInt(parts[1].replace(".", ""));
         this.inbetriebnahme = Double.parseDouble(parts[2].replace(",", "."));
         this.nd = Double.parseDouble(parts[3].replace(",","."));
-        this.bis_nd = GUI.getYear()-inbetriebnahme;
-        this.bis_afa = ak/bis_nd;
-        this.afaDJ = ak/nd;
-        this.bw = ak-bis_afa;
-        this.bwEnde = ak-bis_afa-afaDJ;
     }
 
     public double getBwEnde() {
@@ -84,6 +78,27 @@ public class Anlage {
     public double getAfaDJ() {
         return afaDJ;
     }
+
+    public void setBis_nd(double bis_nd) {
+        this.bis_nd = bis_nd;
+    }
+
+    public void setBis_afa(double bis_afa) {
+        this.bis_afa = bis_afa;
+    }
+
+    public void setBw(double bw) {
+        this.bw = bw;
+    }
+
+    public void setAfaDJ(double afaDJ) {
+        this.afaDJ = afaDJ;
+    }
+
+    public void setBwEnde(double bwEnde) {
+        this.bwEnde = bwEnde;
+    }
+    
     
     
 }
