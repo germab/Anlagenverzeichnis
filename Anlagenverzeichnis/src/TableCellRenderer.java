@@ -30,7 +30,7 @@ public class TableCellRenderer implements javax.swing.table.TableCellRenderer
             label.setText(value.toString());
             
         }
-        else if(value instanceof Integer)
+        else if(value instanceof Integer || value instanceof Double)
         {
             DecimalFormat tausendertrennung = new DecimalFormat();
             label.setText(tausendertrennung.format(value));
