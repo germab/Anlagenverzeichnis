@@ -32,6 +32,7 @@ public class Anlage {
         this.bw = bw;
         this.afaDJ = afaDJ;
         this.bwEnde = bwEnde;
+        this.bis_nd = LocalDate.now().getYear()-nd;
     }
     
     public Anlage(String line){
