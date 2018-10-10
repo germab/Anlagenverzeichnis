@@ -1,4 +1,7 @@
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
@@ -50,6 +53,26 @@ public class AnlagenBL extends AbstractTableModel{
             case 8: return a.getBwEnde();
             default:
                 return "???";
+        }
+    }
+    
+    public void load(File f){
+        try(BufferedReader reader = new BufferedReader(new FileReader(f))){
+            String line =reader.readLine();
+            while((line = reader.readLine()) != null){
+                try{
+                    /*Anlage a = new Anlage(line);
+                    anlagen.add(a);
+*/
+                    System.out.println(line);
+                }
+                catch(Exception ex){
+                    
+                }
+            }
+        }
+        catch(Exception ex){
+            
         }
     }
     

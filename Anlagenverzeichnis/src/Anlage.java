@@ -33,6 +33,11 @@ public class Anlage {
         this.afaDJ = afaDJ;
         this.bwEnde = bwEnde;
     }
+    
+    public Anlage(String line){
+        String[] parts = line.split("");
+        
+    }
 
     public double getBwEnde() {
         return bwEnde;
