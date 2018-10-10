@@ -1,3 +1,6 @@
+
+import java.io.File;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,6 +26,8 @@ public class GUI extends javax.swing.JFrame {
             year+=1;
             this.cbBox.addItem(year);
         }
+        File f = new File((".anlagenverzeichnis.csv"));
+        model.load(f);
     }
     
 
