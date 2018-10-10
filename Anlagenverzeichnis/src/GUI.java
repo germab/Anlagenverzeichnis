@@ -15,6 +15,7 @@ public class GUI extends javax.swing.JFrame {
 
     private AnlagenBL model = new AnlagenBL();
     private TableCellRenderer renderer = new TableCellRenderer();
+    private static int year;
     /**
      * Creates new form GUI
      */
@@ -33,9 +34,9 @@ public class GUI extends javax.swing.JFrame {
     }
     
     
-    public int getYear()
+    public static int getYear()
     {
-        return (int) this.cbBox.getSelectedItem();
+       
     }
 
     /**

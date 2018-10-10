@@ -44,7 +44,9 @@ public class Anlage {
         this.nd = Double.parseDouble(parts[3].replace(",","."));
         this.bis_nd = GUI.getYear()-inbetriebnahme;
         this.bis_afa = ak/bis_nd;
-        
+        this.afaDJ = ak/nd;
+        this.bw = ak-bis_afa;
+        this.bwEnde = ak-bis_afa-afaDJ;
     }
 
     public double getBwEnde() {
