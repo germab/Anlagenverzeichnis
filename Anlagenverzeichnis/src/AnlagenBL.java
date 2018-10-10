@@ -29,6 +29,17 @@ public class AnlagenBL extends AbstractTableModel{
     public int getColumnCount() {
         return 9;
     }
+    
+    public void calculate(){
+        for (Anlage a : anlagen) {
+            a.setBis_nd(GUI.getYear()-a.getInbetriebnahme());
+            a.setBis_afa(a.getAk()/a.getNd()*a.getBis_nd());
+            a.setBw(a.getAk()-a.getBis_afa());
+            a.setAfaDJ(a.getAk()/a.getNd());
+            a.setBwEnde(a.getBw()-a.getAfaDJ());
+        }
+        fireTableDataChanged();
+    }
 
     @Override
     public String getColumnName(int i) {
