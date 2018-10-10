@@ -60,19 +60,17 @@ public class AnlagenBL extends AbstractTableModel{
         try(BufferedReader reader = new BufferedReader(new FileReader(f))){
             String line =reader.readLine();
             while((line = reader.readLine()) != null){
-                try{
+                
                     /*Anlage a = new Anlage(line);
                     anlagen.add(a);
 */
                     System.out.println(line);
-                }
-                catch(Exception ex){
-                    
-                }
+                
+                
             }
         }
         catch(Exception ex){
-            
+            ex.printStackTrace();
         }
     }
     

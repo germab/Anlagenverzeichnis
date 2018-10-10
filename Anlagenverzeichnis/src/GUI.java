@@ -26,7 +26,7 @@ public class GUI extends javax.swing.JFrame {
             year+=1;
             this.cbBox.addItem(year);
         }
-        File f = new File((".anlagenverzeichnis.csv"));
+        File f = new File("./anlagenverzeichnis.csv");
         model.load(f);
     }
     
@@ -38,8 +38,7 @@ public class GUI extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         lbYear = new javax.swing.JLabel();
         cbBox = new javax.swing.JComboBox<>();
@@ -48,22 +47,20 @@ public class GUI extends javax.swing.JFrame {
         jtTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Design Preview (Anlagenverzeichnis)");
+        setTitle("Anlagenverzeichnis");
 
         lbYear.setText("Year:");
 
         btUpdate.setText("Update Table");
 
         jtTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String []
-            {
+            new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
