@@ -24,6 +24,7 @@ public class GUI extends javax.swing.JFrame {
             this.cbBox.addItem(year);
         }
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
