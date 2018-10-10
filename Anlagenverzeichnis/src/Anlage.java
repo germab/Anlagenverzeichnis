@@ -15,14 +15,14 @@ public class Anlage {
     private String bezeichnung;
     private int ak;
     private double inbetriebnahme;
-    private int nd;
+    private double nd;
     private double bis_nd;
     private double bis_afa;
     private double bw;
     private double afaDJ;
     private double bwEnde;
 
-    public Anlage(String bezeichnung, int ak, double inbetriebnahme, int nd, double bis_nd, double bis_afa, double bw, double afaDJ, double bwEnde) {
+    public Anlage(String bezeichnung, int ak, double inbetriebnahme, double nd, double bis_nd, double bis_afa, double bw, double afaDJ, double bwEnde) {
         this.bezeichnung = bezeichnung;
         this.ak = ak;
         this.inbetriebnahme = inbetriebnahme;
@@ -35,8 +35,11 @@ public class Anlage {
     }
     
     public Anlage(String line){
-        String[] parts = line.split("");
-        
+        String[] parts = line.split(";");
+        this.bezeichnung = parts[0];
+        this.ak = Integer.parseInt(parts[1].replace(".", ""));
+        this.inbetriebnahme = Double.parseDouble(parts[2].replace(",", "."));
+        this.nd = Double.parseDouble(parts[3].replace(",","."));
     }
 
     public double getBwEnde() {
@@ -55,7 +58,7 @@ public class Anlage {
         return inbetriebnahme;
     }
 
-    public int getNd() {
+    public double getNd() {
         return nd;
     }
 

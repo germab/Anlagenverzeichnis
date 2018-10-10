@@ -61,10 +61,8 @@ public class AnlagenBL extends AbstractTableModel{
             String line =reader.readLine();
             while((line = reader.readLine()) != null){
                 
-                    /*Anlage a = new Anlage(line);
+                    Anlage a = new Anlage(line);
                     anlagen.add(a);
-*/
-                    System.out.println(line);
                 
                 
             }
