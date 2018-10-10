@@ -30,10 +30,19 @@ public class TableCellRenderer implements javax.swing.table.TableCellRenderer
             label.setText(value.toString());
             
         }
-        else if(value instanceof Integer || value instanceof Double)
+        else if(value instanceof Integer || value instanceof Double && column!=2 && column!=3)
         {
             DecimalFormat tausendertrennung = new DecimalFormat();
             label.setText(tausendertrennung.format(value));
+        }
+        else if(value instanceof Double)
+        {
+            label.setText(String.format("%.1f", value));
+        }
+        
+        if(isSelected)
+        {
+            label.setBackground(new Color(130,200,240,123));
         }
         
         
