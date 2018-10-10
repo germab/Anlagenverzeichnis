@@ -1,5 +1,6 @@
 
 import java.time.LocalDate;
+import java.time.Year;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -41,6 +42,9 @@ public class Anlage {
         this.ak = Integer.parseInt(parts[1].replace(".", ""));
         this.inbetriebnahme = Double.parseDouble(parts[2].replace(",", "."));
         this.nd = Double.parseDouble(parts[3].replace(",","."));
+        this.bis_nd = GUI.getYear()-inbetriebnahme;
+        this.bis_afa = ak/bis_nd;
+        
     }
 
     public double getBwEnde() {

@@ -18,7 +18,7 @@ import javax.swing.table.AbstractTableModel;
 public class AnlagenBL extends AbstractTableModel{
 
     private ArrayList<Anlage> anlagen = new ArrayList();
-    private static String[] COLNAMES = {"Bezeichnung","AK","Inbetriebnahme","ND","bisherige ND","AfA bisher","Wert vor ...","Afa d. J.","BW 31.12."};
+    private static String[] COLNAMES = {"Bezeichnung","AK","Inbetriebnahme","ND","bisherige ND","AfA bisher","Wert vor AfA","AfA d. J.","BW 31.12."};
     
     @Override
     public int getRowCount() {
