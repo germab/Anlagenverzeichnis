@@ -32,6 +32,11 @@ public class GUI extends javax.swing.JFrame {
         model.load(f);
     }
     
+    
+    public int getYear()
+    {
+        return (int) this.cbBox.getSelectedItem();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
